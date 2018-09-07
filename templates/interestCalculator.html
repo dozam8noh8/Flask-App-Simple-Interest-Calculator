@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> Owens mad calculator</title>
+
+        </head>
+        <body>
+            <h1>
+                Welcome to Owen's mad simple interest calculator!
+            </h1>
+            <h2>
+                quickmaff
+            </h2>
+            <br>
+            <br>
+            <form method = "post">
+                <br>
+                <label>Total Invested ($): </label><br/>
+                <input type ="text" name="initial" placeholder = "Amount Invested">
+                <br>
+                <br>
+                <label>Interest Rate (%): </label><br/>
+                <input name = "rate" type = "text" placeholder = "Interest Rate">
+                <br>
+                <br>
+                <label>Time invested (Years): </label><br/>
+                <input name ="time" value="{{totaltime}}" type = "text" placeholder = "Time invested" 
+                {% if calc_time == True %}
+                style = "background-Color: #ddd;"   disabled
+                {% endif %}>
+                <br>
+                <br>
+                <label>Interest Gained ($): </label><br/>
+                <input name="gain" type="text" value="{{total}}" placeholder = "Interest Gained" 
+                {% if calc_total == True %}
+                 style = "background-Color: #ddd;"   disabled 
+                 {% endif %}>
+                <br>
+                <br>
+                <input type = "submit" id = "calc" value = "CALCULATE" style ="border: none; width:  200px; height: 100px;" >
+            </form>
+            <h1>{{message}}</h1>
+                <br>
+                <a href = "{{url_for('timeCalculator')}}">  Calculate time! </a> <!-- make these using url_for--->
+                &emsp;
+                <a href = "{{url_for('mainWebsite')}}"> Calculate Interest! </a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+
+                    <a href = "{{url_for('credits')}}"> Credits Page! </a>
+
+                <br>
+                <br>
+                <br>
+                    <a href = "{{url_for('anti_age')}}"> FREE ANTI-AGEING SERUM TRIAL COMPLETELY FREE NOT A SCAM </a> <!-- change to url for soon-->
+            
+        </body>
+    </html>
